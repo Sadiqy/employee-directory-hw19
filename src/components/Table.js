@@ -6,7 +6,7 @@ export default function (props) {
         {props.data.map(person =>
 
 
-            <div class="list-group list-group-item list-group-item-action list-group-item-secondary" id="list">
+            <div className="list-group list-group-item list-group-item-action list-group-item-secondary align-items-center" id="list">
 
                 
                     <img className="d-flex justify-content-start align-items-center" src={person.picture.thumbnail} />
