@@ -3,23 +3,46 @@ import React from 'react';
 export default function (props) {
     console.log(props.data)
     return (<>
-        {props.data.map(person =>
+
+        <table className='table'>
+            <thead>
+                <tr>
+                    <th scope='col'>Image</th>
+                    <th scope='col'>Title</th>
+                    <th scope='col'>First</th>
+                    <th scope='col'>Last</th>
+                    <th scope='col'>Number</th>
+                    <th scope='col'>email</th>
+                    <th scope='col'>age</th>
 
 
-            <div className="list-group list-group-item list-group-item-action list-group-item-secondary align-items-center" id="list">
-
-                
-                    <img className="d-flex justify-content-start align-items-center" src={person.picture.thumbnail} />
-                    {person.name.title} 
-                    {person.name.first} 
-                    {person.name.last} 
-                    {person.phone}{person.email}
-                    <div className="d-flex justify-content-end align-items-center">{person.dob.age}</div>
-
-            </div>
+                </tr>
+            </thead>
+            <tbody>
+                 {props.data.map(person =>
 
 
-        )}
+
+                <tr>
+                    <td><img className="d-flex justify-content-start align-items-center" src={person.picture.thumbnail} /></td>
+                    <td>{person.name.title}</td>
+                    <td>{person.name.first}</td>
+                    <td>{person.name.last}</td>
+                    <td>{person.phone}</td>
+                    <td>{person.email}</td>
+                    <td>{person.dob.age}</td>
+
+                </tr>
+
+               
+
+
+            )}
+
+            </tbody>
+           
+
+        </table>
 
 
     </>)
